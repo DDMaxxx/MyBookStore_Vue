@@ -1,0 +1,19 @@
+<section class="channel-group">
+    <div class="channel-group_header">
+        <h2 class="channel-group_title">限时免费</h2>
+    </div>
+    <ul class="book-table">
+        <li v-for="item in free" v-on:click="chapterInfo( item.fiction_id)">
+            <div class="u-book">
+                <div class="book-cover">
+                    <img alt="item.ad_name" v-bind:src="item.data.book_cover">
+                    <div class="u-tagRT -freefiction"></div>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">{{ item.ad_name}}</h3>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <a href="/ejs_test" class="channel-group_footer">更多限免佳作&gt;&gt;</a>
+</section>

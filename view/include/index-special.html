@@ -1,0 +1,15 @@
+<section class="channle-h5">
+    <div class="channle-h5_header">
+        <p class="channle-h5_title">
+            精选专题<i>热</i>
+        </p>
+    </div>
+    <ul class="list-h5_special">
+        <li v-for="item in topic">
+            <div class="list-h5_special_item">
+                <img alt="{{ item.ad_name}}" v-bind:src="item.ad_pic_url">
+            </div>
+        </li>
+    </ul>
+    <a href="javascript:" class="channel-group_footer">更多精彩专题&gt;&gt;</a>
+</section>

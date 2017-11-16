@@ -1,0 +1,33 @@
+<section class="channle-h5">
+<div class="channle-h5_header">
+    <p class="channle-h5_title">
+        女生最爱
+    </p>
+</div>
+<div>
+    <div>
+        <ul class="list-h5">
+            <li v-for="(item,index) in female" v-if="index<5" v-on:click="chapterInfo( item.fiction_id)">
+                <div class="book-h5">
+                    <div class="book-h5_cover">
+                        <img alt="{{ item.title }}" v-bind:src="item.cover">
+                        <p class="book-h5_finish" v-if="item.finish">完结</p>
+                    </div>
+                    <div class="book-h5_info">
+                        <p class="book-h5_title">{{item.title}}</p>
+                        <p class="book-h5_author">{{item.authors}}</p>
+                        <p class="book-h5_summary">{{item.summary}}</p>
+                        <div class="book-h5_wrap">
+                            <p class="book-h5_tag" v-for="(tag,i) in item.tags" v-if="i<3">{{tag}}</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="channel-h5_footer_next">
+        <a href="javascript:">换一换</a>
+        <a href="/female">女生频道</a>
+    </div>
+</div>
+</section>
